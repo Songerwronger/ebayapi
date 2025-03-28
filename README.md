@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# eBay Price Research Tool
 
-## Getting Started
+A Next.js application that helps you research average sold prices for items on eBay. This tool is particularly useful for businesses managing their online sales on eBay, as it provides quick access to historical price data.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Search for any product on eBay
+- View average sold prices for different time periods (last week, month, or year)
+- See recent sales data with individual prices
+- Clean, modern user interface
+- Real-time data from eBay's API
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Prerequisites
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Node.js 18.x or later
+- eBay Developer Account with API access
+- eBay API credentials (App ID, Cert ID, Dev ID, and Access Token)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Setup
 
-## Learn More
+1. Clone the repository:
+   ```bash
+   git clone [your-repo-url]
+   cd ebayidea
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Create a `.env.local` file in the root directory and add your eBay API credentials:
+   ```
+   EBAY_APP_ID=your_app_id_here
+   EBAY_CERT_ID=your_cert_id_here
+   EBAY_DEV_ID=your_dev_id_here
+   EBAY_ACCESS_TOKEN=your_access_token_here
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Getting eBay API Credentials
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Go to the [eBay Developer Program](https://developer.ebay.com/)
+2. Create an account or sign in
+3. Create a new application to get your credentials
+4. Generate an OAuth token for the Browse API
+5. Add the credentials to your `.env.local` file
+
+## Usage
+
+1. Enter a product name in the search box
+2. Select a time range (last week, month, or year)
+3. Click "Search" to see the average price and recent sales data
+
+## Technologies Used
+
+- Next.js 14
+- React 19
+- TailwindCSS
+- eBay Browse API
+
+## License
+
+MIT
